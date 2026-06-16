@@ -77,18 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "will you go on a date with me? 💖" },
-      { name: "description", content: "A playful date invitation web app. Send the link, they can't say no. 💖" },
+      { title: "Lovable App" },
+      { name: "description", content: "Lovable Generated Project" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "will you go on a date with me? 💖" },
-      { property: "og:description", content: "A playful date invitation web app. Send the link, they can't say no. 💖" },
+      { property: "og:title", content: "Lovable App" },
+      { property: "og:description", content: "Lovable Generated Project" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "will you go on a date with me? 💖" },
-      { name: "twitter:description", content: "A playful date invitation web app. Send the link, they can't say no. 💖" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4009d904-d693-4ec2-8213-9a0e366337a9" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4009d904-d693-4ec2-8213-9a0e366337a9" },
     ],
     links: [
       {
