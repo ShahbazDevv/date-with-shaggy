@@ -188,10 +188,10 @@ function DateInvite() {
         day: "numeric",
       })
     : "";
-  const dayLong = {
+  const dayLong = ({
     MON: "Monday", TUE: "Tuesday", WED: "Wednesday", THU: "Thursday",
     FRI: "Friday", SAT: "Saturday", SUN: "Sunday",
-  }[day];
+  } as Record<string, string>)[day] ?? day;
   const timeLabel = `${parseInt(hour, 10)}:${minute} ${meridiem}`;
 
   return (
