@@ -69,6 +69,9 @@
 
 :root {
   --radius: 0.625rem;
+  --hot-pink: oklch(0.72 0.22 0);
+  --soft-pink: oklch(0.86 0.1 350);
+  --deep-pink: oklch(0.65 0.27 350);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -144,7 +147,47 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background: linear-gradient(180deg, #FFB6D9 0%, #FFC0CB 100%);
+    color: #1a1a1a;
+    font-family: var(--font-body);
+    min-height: 100vh;
   }
 }
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+@utility font-body {
+  font-family: var(--font-body);
+}
+@utility font-marker {
+  font-family: var(--font-marker);
+}
+
+@keyframes float-up {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-40px) rotate(15deg); opacity: 0.3; }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-200px) scale(1.4); opacity: 0; }
+}
+
+.anim-float { animation: float-up 6s ease-in-out infinite; }
+.anim-spin-slow { animation: spin-slow 8s linear infinite; }
+.anim-bounce-soft { animation: bounce-soft 2s ease-in-out infinite; }
+.anim-shake { animation: shake 0.3s ease-in-out; }
