@@ -288,7 +288,7 @@ function ScreenOne({ onYes }: { onYes: () => void }) {
           onClick={dodge}
           className="font-display rounded-[25px] border-2 border-[#FF69B4] bg-white px-8 py-4 text-lg font-bold text-[#FF69B4]"
         >
-          MAYBE LATER
+          No 😢
         </motion.button>
       </div>
 
